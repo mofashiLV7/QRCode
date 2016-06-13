@@ -13,6 +13,7 @@
 		6C1045221D0E962100ACE132 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10451B1D0E962100ACE132 /* ViewController.m */; };
 		6C1045231D0E962100ACE132 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10451E1D0E962100ACE132 /* AppDelegate.m */; };
 		6C1045241D0E962100ACE132 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10451F1D0E962100ACE132 /* main.m */; };
+		6C1045271D0E988700ACE132 /* QRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1045261D0E988700ACE132 /* QRCodeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6C10451D1D0E962100ACE132 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C10451E1D0E962100ACE132 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C10451F1D0E962100ACE132 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C1045251D0E988700ACE132 /* QRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeManager.h; sourceTree = "<group>"; };
+		6C1045261D0E988700ACE132 /* QRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +81,12 @@
 		6C1045161D0E962100ACE132 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6C1045171D0E962100ACE132 /* Detector */,
-				6C1045181D0E962100ACE132 /* Generator */,
-				6C1045191D0E962100ACE132 /* Home */,
-				6C10451C1D0E962100ACE132 /* Other */,
-				6C1045201D0E962100ACE132 /* Scanning */,
 				6C1045211D0E962100ACE132 /* Tools */,
+				6C1045191D0E962100ACE132 /* Home */,
+				6C1045181D0E962100ACE132 /* Generator */,
+				6C1045171D0E962100ACE132 /* Detector */,
+				6C1045201D0E962100ACE132 /* Scanning */,
+				6C10451C1D0E962100ACE132 /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -131,6 +134,8 @@
 		6C1045211D0E962100ACE132 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6C1045251D0E988700ACE132 /* QRCodeManager.h */,
+				6C1045261D0E988700ACE132 /* QRCodeManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				6C1045231D0E962100ACE132 /* AppDelegate.m in Sources */,
 				6C1045241D0E962100ACE132 /* main.m in Sources */,
 				6C1045221D0E962100ACE132 /* ViewController.m in Sources */,
+				6C1045271D0E988700ACE132 /* QRCodeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
