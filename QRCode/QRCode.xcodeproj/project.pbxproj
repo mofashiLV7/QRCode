@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C1045011D0E94B000ACE132 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1045001D0E94B000ACE132 /* main.m */; };
-		6C1045041D0E94B000ACE132 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1045031D0E94B000ACE132 /* AppDelegate.m */; };
-		6C1045071D0E94B000ACE132 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1045061D0E94B000ACE132 /* ViewController.m */; };
 		6C10450A1D0E94B000ACE132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C1045081D0E94B000ACE132 /* Main.storyboard */; };
 		6C10450C1D0E94B000ACE132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C10450B1D0E94B000ACE132 /* Assets.xcassets */; };
 		6C10450F1D0E94B000ACE132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C10450D1D0E94B000ACE132 /* LaunchScreen.storyboard */; };
+		6C1045221D0E962100ACE132 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10451B1D0E962100ACE132 /* ViewController.m */; };
+		6C1045231D0E962100ACE132 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10451E1D0E962100ACE132 /* AppDelegate.m */; };
+		6C1045241D0E962100ACE132 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10451F1D0E962100ACE132 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C1044FC1D0E94B000ACE132 /* QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C1045001D0E94B000ACE132 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6C1045021D0E94B000ACE132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6C1045031D0E94B000ACE132 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C1045051D0E94B000ACE132 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C1045061D0E94B000ACE132 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C1045091D0E94B000ACE132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C10450B1D0E94B000ACE132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C10450E1D0E94B000ACE132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C1045101D0E94B000ACE132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C10451A1D0E962100ACE132 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6C10451B1D0E962100ACE132 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6C10451D1D0E962100ACE132 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6C10451E1D0E962100ACE132 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6C10451F1D0E962100ACE132 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +58,7 @@
 		6C1044FE1D0E94B000ACE132 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
-				6C1045021D0E94B000ACE132 /* AppDelegate.h */,
-				6C1045031D0E94B000ACE132 /* AppDelegate.m */,
-				6C1045051D0E94B000ACE132 /* ViewController.h */,
-				6C1045061D0E94B000ACE132 /* ViewController.m */,
+				6C1045161D0E962100ACE132 /* Classes */,
 				6C1045081D0E94B000ACE132 /* Main.storyboard */,
 				6C10450B1D0E94B000ACE132 /* Assets.xcassets */,
 				6C10450D1D0E94B000ACE132 /* LaunchScreen.storyboard */,
@@ -74,9 +71,68 @@
 		6C1044FF1D0E94B000ACE132 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6C1045001D0E94B000ACE132 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C1045161D0E962100ACE132 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6C1045171D0E962100ACE132 /* Detector */,
+				6C1045181D0E962100ACE132 /* Generator */,
+				6C1045191D0E962100ACE132 /* Home */,
+				6C10451C1D0E962100ACE132 /* Other */,
+				6C1045201D0E962100ACE132 /* Scanning */,
+				6C1045211D0E962100ACE132 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6C1045171D0E962100ACE132 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detector;
+			sourceTree = "<group>";
+		};
+		6C1045181D0E962100ACE132 /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		6C1045191D0E962100ACE132 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6C10451A1D0E962100ACE132 /* ViewController.h */,
+				6C10451B1D0E962100ACE132 /* ViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6C10451C1D0E962100ACE132 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6C10451D1D0E962100ACE132 /* AppDelegate.h */,
+				6C10451E1D0E962100ACE132 /* AppDelegate.m */,
+				6C10451F1D0E962100ACE132 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6C1045201D0E962100ACE132 /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scanning;
+			sourceTree = "<group>";
+		};
+		6C1045211D0E962100ACE132 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C1045071D0E94B000ACE132 /* ViewController.m in Sources */,
-				6C1045041D0E94B000ACE132 /* AppDelegate.m in Sources */,
-				6C1045011D0E94B000ACE132 /* main.m in Sources */,
+				6C1045231D0E962100ACE132 /* AppDelegate.m in Sources */,
+				6C1045241D0E962100ACE132 /* main.m in Sources */,
+				6C1045221D0E962100ACE132 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
