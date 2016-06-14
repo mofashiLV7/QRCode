@@ -7,6 +7,13 @@
 //
 
 #import "QRCodeManager.h"
+#import <AVFoundation/AVFoundation.h>
+
+@interface QRCodeManager ()<AVCaptureMetadataOutputObjectsDelegate>
+
+@property(nonatomic,copy) void(^resultCallBack)(NSArray *results);
+
+@end
 
 @implementation QRCodeManager
 
@@ -130,9 +137,73 @@ static QRCodeManager *_instance;
 
 
 
+#pragma mark -----------------------扫描二维码
+- (void)startScanningQRCodeWithInView:(UIView *)inView  scanView:(UIView *)scanView resultCallback:(void(^)(NSArray *results))callback{
+    
+    // 1.保存block
+    self.resultCallBack = callback;
+    
+    // 2.创建输入
+    // 2.1定义错误
+    NSError *error = nil;
+    
+    // 2.2获取摄像头
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    // 2.3创建输入
+    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
+    
+    // 3.创建输出
+    AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc]init];
+    [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    
+    // 4.创建捕捉对话
+    AVCaptureSession *session = [[AVCaptureSession alloc]init];
+    [session addInput:input];
+    [session addOutput:output];
+    
+    // 5.设置输入的内容类型(必须在session添加output之后)
+    [output setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+    
+    // 6.添加预览图层(让用户看到扫描的界面)
+    // 6.1创建图层
+    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:session];
+    
+    // 6.2设置layer的frame
+    previewLayer.frame = inView.bounds;
+    
+    // 6.3将图层添加到其它图层中
+    [inView.layer insertSublayer:previewLayer below:scanView.layer];
+    
+    // 7.设置扫描区域
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGFloat x = scanView.frame.origin.y / screenSize.height;
+    CGFloat y = scanView.frame.origin.x / screenSize.width;
+    CGFloat w = scanView.frame.size.height / screenSize.height;
+    CGFloat h = scanView.frame.size.width / screenSize.width;
+    output.rectOfInterest = CGRectMake(x, y, w, h);
+    
+    // 8.开始扫描
+    [session startRunning];
+     
+    
+    
+}
 
-
-
+#pragma mark -----------------------代理方法
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
+    
+    // 1.遍历结果
+    NSMutableArray *resultArray = [NSMutableArray array];
+    for (AVMetadataMachineReadableCodeObject *result in metadataObjects) {
+        [resultArray addObject:result];
+    }
+    
+    // 2.将结果回调出去
+    self.resultCallBack(resultArray);
+    
+    
+}
 
 
 
